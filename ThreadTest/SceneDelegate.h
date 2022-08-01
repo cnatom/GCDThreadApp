@@ -1,15 +1,14 @@
+////
+////  SceneDelegate.h
+////  ThreadTest
+////
+////  Created by atom on 2022/8/1.
+////
 //
-//  SceneDelegate.h
-//  ThreadTest
+//#import <UIKit/UIKit.h>
 //
-//  Created by atom on 2022/8/1.
+//@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 //
-
-#import <UIKit/UIKit.h>
-
-@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
-
-@property (strong, nonatomic) UIWindow * window;
-
-@end
-
+//
+//@end
+//
