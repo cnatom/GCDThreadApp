@@ -196,9 +196,10 @@
  */
 - (UIButton *)createButtonWithTitle:(NSString *)title action:(SEL)action {
     UIButton *newButton = [UIButton new];
-    [newButton setTitle:title forState:UIControlStateNormal];
-    [newButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [newButton setBackgroundColor:[UIColor systemBlueColor]];
+    UIButtonConfiguration *uiConfig = UIButtonConfiguration.borderedProminentButtonConfiguration;
+    uiConfig.title = title;
+    uiConfig.cornerStyle = UIButtonConfigurationCornerStyleCapsule;
+    newButton.configuration = uiConfig;
     [newButton addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:newButton];
     return newButton;
