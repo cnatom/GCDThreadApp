@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DD95EB4093D91305340EA5D /* TTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD95594AA738B21867E1D47 /* TTButton.m */; };
 		3D256A82F08DB35F4229F509 /* Pods_ThreadTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDDBDF95EF4D91D51A07D8B /* Pods_ThreadTest.framework */; };
 		5C043A07289824D500F20639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C043A06289824D500F20639 /* AppDelegate.m */; };
 		5C043A0D289824D500F20639 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C043A0C289824D500F20639 /* ViewController.m */; };
@@ -41,8 +40,6 @@
 /* Begin PBXFileReference section */
 		0568FF67CBE2D2D6D414A5D7 /* Pods-ThreadTest-ThreadTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadTest-ThreadTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ThreadTest-ThreadTestUITests/Pods-ThreadTest-ThreadTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1C05A5C9BD6159523C2FAA52 /* Pods_ThreadTest_ThreadTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreadTest_ThreadTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DD95594AA738B21867E1D47 /* TTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTButton.m; sourceTree = "<group>"; };
-		2DD95BBC71F22FBCE24D7105 /* TTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTButton.h; sourceTree = "<group>"; };
 		36302B0921C761D06DFE89CA /* Pods-ThreadTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadTestTests.release.xcconfig"; path = "Target Support Files/Pods-ThreadTestTests/Pods-ThreadTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		367B2405BD1C270250A57EF4 /* Pods-ThreadTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadTest.debug.xcconfig"; path = "Target Support Files/Pods-ThreadTest/Pods-ThreadTest.debug.xcconfig"; sourceTree = "<group>"; };
 		4C565219170558884D5AA8EB /* Pods-ThreadTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ThreadTestTests/Pods-ThreadTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,15 +104,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		2DD95E2F0173069F909BE431 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2DD95BBC71F22FBCE24D7105 /* TTButton.h */,
-				2DD95594AA738B21867E1D47 /* TTButton.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		5C0439F9289824D500F20639 = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +137,6 @@
 				5C043A13289824D600F20639 /* LaunchScreen.storyboard */,
 				5C043A16289824D600F20639 /* Info.plist */,
 				5C043A17289824D600F20639 /* main.m */,
-				2DD95E2F0173069F909BE431 /* Views */,
 			);
 			path = ThreadTest;
 			sourceTree = "<group>";
@@ -421,7 +408,6 @@
 				5C043A0D289824D500F20639 /* ViewController.m in Sources */,
 				5C043A07289824D500F20639 /* AppDelegate.m in Sources */,
 				5C043A18289824D600F20639 /* main.m in Sources */,
-				2DD95EB4093D91305340EA5D /* TTButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
