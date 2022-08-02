@@ -7,6 +7,8 @@
 #import <Masonry.h>
 #import "ViewController.h"
 
+static int cnt; // 用来记录shareInstance执行了多少次
+
 @interface ViewController ()
 @property(nonatomic, strong) UIButton *afterButton;
 @property(nonatomic, strong) UIButton *groupButton;
@@ -140,19 +142,29 @@
     });
 }
 
+/**
+ * 某个操作在应用程序生命周期中只执行一次，这种需求很常见，比如单例模式。
+ * dispatch_once 函数可以保证指定的处理在应用程序生命周期中只被执行一次
+ */
+- (IBAction)once_func:(id)sender {
+    NSLog(@"开始执行once_func:%@", NSThread.currentThread);
+    ViewController *newViewController1 = [ViewController sharedInstance];
+    ViewController *newViewController2 = [ViewController sharedInstance];
+}
+
 + (instancetype)sharedInstance {
+    cnt++;
+    NSLog(@"第%d次执行sharedInstance:%@", cnt, NSThread.currentThread);
     static id _sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        NSLog(@"执行dispatch_once:%@", NSThread.currentThread);
         _sharedInstance = [[self alloc] init];
     });
     return _sharedInstance;
 }
 
-- (IBAction)once_func:(id)sender {
-    NSLog(@"开始执行once_func:%@", NSThread.currentThread);
 
-}
 
 #pragma mark - 组件
 #pragma mark Getter
@@ -185,6 +197,12 @@
     return _applyButton;
 }
 
+- (UIButton *)onceButton {
+    if (_onceButton == NULL) {
+        _onceButton = [self createButtonWithTitle:@"DispatchOnce" action:@selector(once_func:)];
+    }
+    return _onceButton;
+}
 
 #pragma mark Creater
 
